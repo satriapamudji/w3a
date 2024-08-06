@@ -1,0 +1,17 @@
+.container {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .title {
+    padding: 0 0 4rem 0;
+    line-height: 1.15;
+    font-size: var(--step-3);
+    text-align: center;
+  }

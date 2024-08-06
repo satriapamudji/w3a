@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
+@import './reset.css';
+
+:root {
+  --color-background: #0c0c1d;
+  --color-text: #ffffff;
+  --color-primary: #3B82F6;
+  --color-supporting: #F5A201;
+  --step--2: clamp(0.6944rem, 0.6413rem + 0.2656vw, 0.96rem);
+  --step--1: clamp(0.8333rem, 0.76rem + 0.3667vw, 1.2rem);
+  --step-0: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
+  --step-1: clamp(1.2rem, 1.065rem + 0.675vw, 1.875rem);
+  --step-2: clamp(1.44rem, 1.2593rem + 0.9038vw, 2.3438rem);
+  --step-3: clamp(1.728rem, 1.4877rem + 1.2017vw, 2.9297rem);
+  --step-4: clamp(2.0736rem, 1.7559rem + 1.5885vw, 3.6621rem);
+  --step-5: clamp(2.4883rem, 2.0705rem + 2.0893vw, 4.5776rem);
+  --step-6: clamp(2.986rem, 2.4388rem + 2.7361vw, 5.722rem);
+  --step-7: clamp(3.5832rem, 2.8693rem + 3.5694vw, 7.1526rem);
+  --step-8: clamp(4.2998rem, 3.3716rem + 4.6409vw, 8.9407rem);
+  --step-9: clamp(5.1598rem, 3.9566rem + 6.0161vw, 11.1759rem);
+  --step-10: clamp(6.1917rem, 4.6361rem + 7.7781vw, 13.9698rem);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: 'Outfit', sans-serif;
+  font-size: var(--step-0);
+}
+
+#__next {
+  min-height: 100vh;
+}

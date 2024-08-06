@@ -28,7 +28,7 @@ function ScrollHandler() {
 export default function Home() {
   return (
     <main>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<></>}>
         <ScrollHandler />
       </Suspense>
       <Hero />

@@ -1,5 +1,5 @@
 "use client";
-import { useEffect } from 'react';
+import { useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Hero from '../../components/Hero';
 import NetworkSection from '../../components/NetworkSection';
@@ -23,10 +23,12 @@ export default function Home() {
   }, [searchParams]);
 
   return (
-    <main>
-      <Hero />
-      <NetworkSection />
-      <AdvantageSection />
-    </main>
+    <Suspense fallback={<div>Loading...</div>}>
+      <main>
+        <Hero />
+        <NetworkSection />
+        <AdvantageSection />
+      </main>
+    </Suspense>
   );
 }

@@ -5,7 +5,7 @@ import Hero from '../../components/Hero';
 import NetworkSection from '../../components/NetworkSection';
 import AdvantageSection from '../../components/AdvantageSection';
 
-export default function Home() {
+function ScrollHandler() {
   const searchParams = useSearchParams();
 
   useEffect(() => {
@@ -22,13 +22,18 @@ export default function Home() {
     }
   }, [searchParams]);
 
+  return null;
+}
+
+export default function Home() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <main>
-        <Hero />
-        <NetworkSection />
-        <AdvantageSection />
-      </main>
-    </Suspense>
+    <main>
+      <Suspense fallback={<div>Loading...</div>}>
+        <ScrollHandler />
+      </Suspense>
+      <Hero />
+      <NetworkSection />
+      <AdvantageSection />
+    </main>
   );
 }

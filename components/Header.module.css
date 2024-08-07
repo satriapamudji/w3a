@@ -60,37 +60,38 @@
     padding: 0.5rem 4rem;
     background-color: var(--color-background);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    position: relative; /* Ensure the header is not fixed */
+    position: relative;
+    /* Ensure the header is not fixed */
     z-index: 1000;
   }
-  
+
   .logo {
     flex-shrink: 0;
   }
-  
+
   .nav {
     display: flex;
     gap: 3rem;
     margin-left: 4rem;
     margin-right: auto;
   }
-  
+
   .nav a {
     color: var(--color-text);
     text-decoration: none;
     font-size: var(--step--1);
     font-weight: 400;
   }
-  
+
   .social {
     display: flex;
     gap: 1rem;
   }
-  
+
   .socialMobile {
     display: none;
   }
-  
+
   .menuToggle {
     display: none;
     background: transparent;
@@ -99,21 +100,21 @@
     padding: 0;
     transition: transform 0.3s ease;
   }
-  
+
   .menuToggle img {
     transition: opacity 0.3s ease, transform 0.3s ease;
   }
-  
+
   @media (max-width: 768px) {
     .header {
       padding: 1.2rem 2rem;
     }
-  
+
     .logo img {
       width: 120px;
       height: auto;
     }
-  
+
     .nav {
       position: fixed;
       top: 0;
@@ -131,23 +132,23 @@
       z-index: 1001;
       overflow-y: auto;
     }
-  
+
     .nav.open {
       transform: translateX(0);
     }
-  
+
     .nav a {
       color: black;
       font-weight: 500;
       margin-bottom: 1rem;
     }
-  
+
     .socialMobile {
       display: flex;
       gap: 1rem;
       margin-top: 2rem;
     }
-  
+
     .menuToggle {
       display: block;
       position: absolute;
@@ -157,12 +158,12 @@
       transition: position 0.3s ease;
       transform: rotate(180deg);
     }
-  
+
     .menuToggle.open {
       position: fixed;
       transform: rotate(180deg);
     }
-  
+
     .social {
       display: none;
     }

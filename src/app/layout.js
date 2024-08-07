@@ -4,7 +4,8 @@ import './globals.css'
 
 export const metadata = {
   title: 'Web3 Alliance',
-  description: 'Unlocking the Potential of Web3 together',
+  description: 'The largest network consolidation of Web3 professionals in the APAC region.',
+  keywords: 'Web3, blockchain, APAC, professionals network',
 }
 
 export default function RootLayout({ children }) {

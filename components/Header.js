@@ -1,6 +1,6 @@
 "use client";
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Header.module.css';
@@ -15,6 +15,7 @@ export default function Header() {
 
   const handleBenefitsClick = (e) => {
     e.preventDefault();
+    setIsMenuOpen(false); // Close the menu when Benefits is clicked
     if (window.location.pathname === '/') {
       // If on home page, scroll directly
       const section = document.getElementById('benefits');
@@ -26,6 +27,20 @@ export default function Header() {
       router.push('/?scroll=benefits');
     }
   };
+
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isMenuOpen && !event.target.closest(`.${styles.nav}`) && !event.target.closest(`.${styles.menuToggle}`)) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isMenuOpen]);
 
   return (
     <header className={styles.header}>

@@ -1,5 +1,5 @@
 .section {
-    height: 125vh;
+    min-height: 125vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -68,11 +68,9 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    align-self: center;
     padding: 1.25rem 3rem;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
-    width: fit-content;
     text-decoration: none;
   }
   
@@ -86,7 +84,8 @@
 
 @media (max-width: 1300px) {
   .section {
-    height: 150vh;
+    min-height: 150vh;
+    padding: 0 2rem;
   }
 
   .title {
@@ -120,6 +119,10 @@
 }
 
 @media (max-width: 568px) {
+    .section {
+        min-height: 200vh;
+      }
+
     .title {
         font-size: var(--step-1);
         text-align: center;
@@ -131,5 +134,9 @@
     
       .cardDescription {
         font-size: var(--step--1);
+      }
+    
+      .button {
+        padding: 1rem;
       }
 }

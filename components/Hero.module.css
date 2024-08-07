@@ -3,7 +3,7 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 0 4rem;
+  padding: 8rem 4rem;
 }
 
 .backgroundWrapper {
@@ -73,7 +73,7 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding: 0 2rem;
+    padding: 4rem 2rem;
   }
 
   .content {
@@ -90,16 +90,8 @@
 }
 
 @media (max-width: 480px) {
-  .section {
-    min-height: 150vh;
-  }
-
   .hero {
     justify-content: center;
-  }
-
-  .hero {
-    padding: 0 2rem;
   }
 
   .content {

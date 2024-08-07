@@ -1,9 +1,9 @@
 .section {
-    min-height: 125vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 4rem;
+    padding: 8rem 4rem;
     background-color: var(--color-background);
 }
 
@@ -83,10 +83,6 @@
 }
 
 @media (max-width: 1300px) {
-    .section {
-        min-height: 150vh;
-        padding: 0 2rem;
-    }
 
     .title {
         font-size: var(--step-3);
@@ -118,11 +114,13 @@
     }
 }
 
-@media (max-width: 568px) {
+@media (max-width: 768px) {
     .section {
-        min-height: 250vh;
+        padding: 4rem 2rem;
     }
+}
 
+@media (max-width: 568px) {
     .title {
         font-size: var(--step-1);
         text-align: center;
